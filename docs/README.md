@@ -56,9 +56,15 @@ Some websites and streaming providers may require their own account, subscriptio
 
 Android may display a warning because the APK is installed outside Google Play. Only install APKs from the official repository linked above.
 
+### Optional: Advanced Protection Blocks Installation
+
+If Android says Advanced Protection is blocking the APK, open your phone's **Settings**, search for **Advanced Protection**, open it, and turn off **Device protection**. Authenticate with your PIN or biometrics and restart the phone if Android requests it. Install the verified APK, then return to the same screen and re-enable **Device protection**. Use this only when Advanced Protection specifically prevents installation, and keep Google Play Protect enabled.
+
 ## Updating
 
-Download the newer APK from GitHub Releases and install it over the existing app. Do not uninstall the old version first. Your created profiles and enabled or disabled setting choices are stored locally and remain available after a normal in-place update. Back up important profile data before updating as an extra precaution.
+Version 0.6.80 installs as a new app and may appear beside an older Bubbles Browser installation. It starts with fresh profiles and settings; data from the older app is not copied automatically.
+
+After installing 0.6.80, future releases can be installed over it normally. Do not uninstall 0.6.80 before those future updates, and export important profile data as an extra precaution.
 
 ## Permissions
 
@@ -75,6 +81,7 @@ Download the newer APK from GitHub Releases and install it over the existing app
 - Confirm the device runs Android 10 or newer.
 - Allow installs from the app that opened the APK.
 - Download the APK again if Android reports that the package is invalid.
+- If Android specifically reports that Advanced Protection blocked the installation, temporarily turn off **Settings > Security & privacy > Advanced Protection > Device protection**, install the verified APK, and re-enable Device protection afterward. Some phones may request a restart.
 - If Android reports a signature conflict, back up app data, uninstall the older differently signed build, and install the current release.
 
 ### A Website Will Not Load
@@ -114,7 +121,7 @@ See [SECURITY.md](SECURITY.md) for supported versions and private vulnerability 
 
 Email: **support.bubblesthedev.webbrowser@gmail.com**
 
-For ordinary bugs, include the app version, Android version, device model, and steps that reproduce the problem. Remove private information from screenshots and logs.
+For ordinary bugs, include the app version, Android version, and steps that reproduce the problem. Remove names, account details, website history, credentials, tokens, location details, and other private information from screenshots and logs.
 
 ## License
 
