@@ -1,4 +1,5 @@
 *.apk
+!Bubbles-Browser-Android-v1.0.3.apk
 to-do.md
 .DS_Store
 Thumbs.db

@@ -1,6 +1,32 @@
-# Bubbles Browser Android 0.6.80 Build 13
+# Bubbles Browser Android 1.0.3 Build 34
 
-Version `0.6.80` build `13` is a major mobile-browser update with a redesigned interface, broader website compatibility, expanded privacy controls, working media features, persistent profiles and settings, and no AI integration.
+Version `1.0.3` build `34` adds targeted YouTube ad-request blocking based on the desktop Bubbles Browser implementation while preserving mobile-site compatibility, profile isolation, uploads, downloads, page restoration, media behavior, and the browser's AI-free design.
+
+## New In Build 34
+
+- Ported the desktop browser's YouTube-specific request rules into Android's existing privacy engine.
+- Blocks known YouTube advertising hosts, ad-reporting paths, tracking pings, and explicit ad query markers when **Ads and trackers** is enabled.
+- Keeps legitimate `googlevideo.com` video and audio streams available instead of blocking the entire media domain.
+- Continues filtering during YouTube single-page navigation without reload loops, page-wide polling, or unsafe JavaScript interfaces.
+- Uses YouTube page, request, and referrer context so YouTube-only rules do not run against unrelated websites.
+- Records blocked YouTube advertising and tracking requests in the existing on-device privacy counters.
+- Preserves YouTube mobile pages, search, thumbnails, comments, recommendations, Shorts navigation, normal playback, seeking, fullscreen, and rotation behavior supported by Android System WebView.
+- Includes no telemetry, analytics, browsing uploads, credential inspection, HTTPS bypasses, or WebView security reductions.
+
+## Features Retained From Earlier Builds
+
+- Added separate WebView cookie, website-storage, geolocation, and Service Worker containers for every saved profile when Android System WebView supports multi-profile mode.
+- Added a disposable isolated WebView container for every private tab, removed when that tab closes without clearing normal-profile data.
+- Added website-requested video recording alongside image camera capture and Android's document picker.
+- Preserved complete `window.open()` and `about:blank` popup documents inside real browser tabs.
+- Added saved per-tab favicons and favicon display in the tab strip.
+- Added on-disk WebView state restoration for normal tabs to improve form, history, and active-page recovery.
+- Enabled browser-grade WebAuthn/passkey and back-forward cache support when available in Android System WebView.
+- Configured Service Worker caching and network behavior for isolated profiles.
+- Kept active website audio running when the app is backgrounded, subject to Android memory and battery limits.
+- Added live byte-level download progress, percentages, transferred size, and automatic status refresh.
+- Kept fullscreen video active across screen rotation without recreating the activity.
+- Forwarded cookies from the active WebView profile for authenticated Android Download Manager requests.
 
 ## Interface And Navigation
 
@@ -17,12 +43,22 @@ Version `0.6.80` build `13` is a major mobile-browser update with a redesigned i
 
 - Uses mobile website layouts by default.
 - Added a global **Desktop mode** toggle in Settings and a remembered **Desktop site** control for individual websites.
+- Uses the installed Android WebView provider's current mobile and Chromium versions instead of an obsolete hardcoded browser identity.
+- Added per-tab WebView history and state restoration, including correct Android back-button navigation and renderer recovery.
+- Added requested popup and new-window handling that opens legitimate links in Bubbles Browser tabs while rejecting popup spam.
+- Added safe handling for phone, SMS, email, map, and validated app links, plus an option to open authentication pages in another installed browser.
+- Added website file uploads through Android's system file picker, including single and multiple selections, website MIME restrictions, and permission-gated camera capture when a secure upload field requests it.
 - Added true full-screen HTML5 video that hides browser and Android system controls during playback.
-- Improved website image and video loading by allowing ordinary media-delivery requests that privacy lists may misclassify.
-- Fixed blank-page behavior on Facebook while continuing to block Facebook tracking resources on unrelated websites.
-- Added compatibility handling for websites that require mixed media content.
+- Restored secure image, font, stylesheet, script, iframe, audio, video, storage, zoom, and JavaScript window behavior expected by modern sites.
+- Fixed privacy-list parsing so path-specific, resource-specific, domain-scoped, and URL-parameter rules are not incorrectly promoted into whole-domain blocks.
+- Added support for unconditional filter-list exceptions and retained supported host-only ad, tracker, malicious-site, and cryptomining rules.
+- Improved website image, stylesheet, font, script, audio, and video loading by allowing legitimate first-party-owned CDNs and ordinary media-delivery requests without globally disabling protection.
+- Fixed application loading on Instagram, Amazon, Walmart, Reddit, Facebook, and other sites that depend on separately hosted first-party resources; actual third-party ad and tracker requests remain eligible for blocking.
+- Fixed blank-page behavior on Facebook with a narrowly scoped compatibility identity and viewport while continuing to block Facebook tracking resources on unrelated websites.
+- Kept insecure mixed content blocked by default instead of weakening HTTPS protections for compatibility.
 - Added secure website permission prompts for camera, microphone, protected media, and location.
 - Location access is requested only when a secure website needs nearby search results; background location is not requested.
+- Web pages now pause and resume with the Android activity instead of being unnecessarily recreated when the app is temporarily backgrounded.
 
 ## Streaming Hub
 
@@ -74,6 +110,7 @@ Version `0.6.80` build `13` is a major mobile-browser update with a redesigned i
 - Added direct audio-file downloading after responsible-use consent.
 - Added Android download-manager integration with active, completed, cancelled, and failed download states.
 - Added download completion and failure notifications.
+- Added authenticated download support by forwarding the active site's cookies, current page referrer, and WebView identity to Android Download Manager.
 - Added optional Music and audio permission handling for local playback.
 
 ## Performance And Reliability
@@ -84,17 +121,17 @@ Version `0.6.80` build `13` is a major mobile-browser update with a redesigned i
 - Added Diagnostics and a refreshable performance snapshot.
 - Updated the Android toolchain and security-related dependencies.
 - Verified profile and setting persistence across restarts and normal future updates.
-- Passed unit tests, Android lint, and all 14 connected Android tests for this build.
+- Passed unit tests, Android lint, and all 16 connected Android tests for this build.
 
 ## Fresh Installation Notice
 
-Version 0.6.80 installs as a new application and may appear beside an older Bubbles Browser installation. It begins with fresh profiles and settings. Data from an older installation is not transferred automatically.
+Version 1.0.3 updates the current Bubbles Browser installation when it was installed from the compatible official APK. Android retains its local profiles and settings during a normal update.
 
 - When an older installation is detected, Bubbles Browser now offers **Remove old app** and opens Android's official uninstall confirmation.
 - The prompt reminds you to back up anything needed before removal because uninstalling permanently deletes the older app's local data.
 - Choose **Keep for now** when you still need time to export information from the older app.
 
-Future releases can be installed over version 0.6.80 normally. Do not uninstall version 0.6.80 before updating if you want Android to retain its local app data.
+Do not uninstall the current app before updating if you want Android to retain its local app data. Export important profile data before any update as an extra precaution.
 
 ## Requirements
 
@@ -104,7 +141,7 @@ Future releases can be installed over version 0.6.80 normally. Do not uninstall 
 
 ## Installation
 
-1. Download `Bubbles-Browser-Android-v0.6.80.apk` from the release assets.
+1. Download `Bubbles-Browser-Android-v1.0.3.apk` from the release assets.
 2. Open the APK on the Android device.
 3. Allow installation from the current browser or file manager if Android requests it.
 4. Choose **Install**, then launch **Bubbles Browser**.
@@ -114,9 +151,9 @@ If Android specifically says Advanced Protection blocked the APK, open **Setting
 
 ## Download Verification
 
-- Version: `0.6.80`
-- Build: `13`
-- APK SHA-256: `273692D08AEC304169DBF08B610BF95F222233076A6AF1A57CA3ECF67AD03CDD`
+- Version: `1.0.3`
+- Build: `34`
+- APK SHA-256: `1E790A9D4C88D08F9AFD666DDFEDB952E5B8699A50901886557F6FF5BFC634B8`
 - APK signature verified
 - Runtime dependencies checked with Snyk at release time
 
@@ -126,8 +163,12 @@ If Android specifically says Advanced Protection blocked the APK, open **Setting
 - Website behavior depends on the Android System WebView installed on the device.
 - Some streaming services may require an official app or may restrict DRM playback in embedded browsers.
 - Music downloads require direct audio-file links and do not extract audio from video websites.
-- Android limits complete cookie and website-storage isolation between browser profiles.
+- Isolated profile storage requires multi-profile support in Android System WebView. Older providers use Android's shared fallback container.
+- Passkeys require support from Android System WebView, the Android credential provider, and the website.
+- OAuth providers can refuse embedded WebViews; use **Open in another browser** when a provider requires a browser or app-managed sign-in flow.
+- Video codecs, Widevine/DRM levels, account playback, and provider restrictions are controlled by the device, Android System WebView, and each service.
 - Android WebView cannot apply every desktop cosmetic-filter rule or provide full DNS-level CNAME uncloaking.
+- YouTube can change its request formats at any time. The blocker intentionally favors working playback over broad rules, and server-selected advertisements may not always be identifiable through Android WebView request interception.
 
 ## Support
 

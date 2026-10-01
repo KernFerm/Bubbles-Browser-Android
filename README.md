@@ -7,7 +7,7 @@ Bubbles Browser is a private, AI-free web browser for Android phones and tablets
 **[Download the newest APK from GitHub Releases](https://github.com/KernFerm/Bubbles-Browser-Android/releases/latest)**
 
 1. On your Android device, open the download link above.
-2. Under **Assets**, tap `Bubbles-Browser-Android-v0.6.80.apk`.
+2. Under **Assets**, tap `Bubbles-Browser-Android-v1.0.3.apk`.
 3. When the download finishes, tap the APK file.
 4. If Android asks for permission, allow your browser or Files app to install unknown apps.
 5. Tap **Install**, then tap **Open**.
@@ -29,12 +29,14 @@ See the [screenshot gallery](https://kernferm.github.io/Bubbles-Browser-Android/
 ## What It Does
 
 - Browse websites in multiple tabs with back, forward, home, reload, and new-tab controls.
+- Load modern mobile sites with JavaScript, responsive images, stylesheets, web fonts, forms, uploads, downloads, popups, and supported audio or video through the device's Android System WebView.
 - Search the web or enter a website address from the start page.
 - Save bookmarks and review or clear browsing history.
 - Download files through Android's system download service and receive completion notifications.
 - Use separate standard, guest, child, work, and streaming profiles.
 - Export and import local profile backups. Profile PINs are not included in backups.
 - Block known advertising and tracking requests and show a session counter.
+- Block supported YouTube advertising and tracking requests without broadly blocking YouTube video and audio delivery.
 - Review separate ad, tracker, fingerprinting, URL-cleanup, malicious-request, cryptomining, and compatibility statistics in the Trust Center.
 - Enable, disable, and update locally cached EasyList, EasyPrivacy, AdGuard, Peter Lowe, DuckDuckGo Tracker Radar, Fanboy, URLHaus, and NoCoin-compatible protection lists.
 - Choose strict, balanced, or off modes for canvas and JavaScript fingerprint protection, plus recommended, strict, or off WebRTC privacy.
@@ -61,11 +63,11 @@ Some websites and streaming providers may require their own account, subscriptio
 
 ## Updating
 
-Version 0.6.80 installs as a new app and may appear beside an older Bubbles Browser installation. It starts with fresh profiles and settings; data from the older app is not copied automatically.
+Version 1.0.3 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
 
 When Bubbles Browser detects the older installation, it offers **Remove old app** and opens Android's official uninstall confirmation. Back up anything needed from the older app first because uninstalling permanently deletes its local data.
 
-After installing 0.6.80, future releases can be installed over it normally. Do not uninstall 0.6.80 before those future updates, and export important profile data as an extra precaution.
+Do not uninstall the current app before updating if you want Android to retain its local data. Export important profile data before updating as an extra precaution.
 
 ## Permissions
 
@@ -89,6 +91,7 @@ After installing 0.6.80, future releases can be installed over it normally. Do n
 
 - Check Wi-Fi or mobile data.
 - Update Android System WebView through Google Play.
+- Reload the page after updating WebView. Bubbles Browser uses the WebView engine installed on the phone, so that update supplies current website-format and security support.
 - Confirm the address is correct and begins with `https://` when possible.
 - Temporarily disable ad and tracker blocking for compatibility testing.
 - If a site breaks after enabling an optional privacy list, disable that list under **Settings > Manage privacy lists**, then reload the page.

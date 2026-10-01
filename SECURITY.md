@@ -6,7 +6,8 @@ Security updates are provided for the latest Android release.
 
 | Version | Supported |
 | --- | --- |
-| 0.6.80 | Yes |
+| 1.0.3 | Yes |
+| 0.6.80 | No |
 | 0.6.70 | No |
 | 0.6.35 | No |
 | 0.6.34 and older | No |
@@ -55,4 +56,4 @@ The app cannot guarantee that every malicious page, tracker, or download will be
 
 ## Dependency Review
 
-Version 0.6.80 uses the dependency set checked with Snyk. The runtime project reported no known vulnerable dependency paths at release time. Findings in development-only Android test tooling are not packaged in the installed APK and will continue to be reviewed as upstream tools are updated.
+Version 1.0.3 uses the dependency set checked with Snyk. The runtime project reported no known vulnerable dependency paths at release time. Findings in development-only Android test tooling are not packaged in the installed APK and will continue to be reviewed as upstream tools are updated.

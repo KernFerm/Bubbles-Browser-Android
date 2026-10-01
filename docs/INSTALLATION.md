@@ -9,7 +9,7 @@
 ## Install On Your Phone
 
 1. On the Android device, open the [Bubbles Browser Android releases page](https://github.com/KernFerm/Bubbles-Browser-Android/releases).
-2. Open the newest release and download `Bubbles-Browser-Android-v0.6.80.apk`.
+2. Open the newest release and download `Bubbles-Browser-Android-v1.0.3.apk`.
 3. Open the download from the browser notification or the Android **Files** app.
 4. If Android blocks the installation, select **Settings** on the warning and enable **Allow from this source** for the browser or file manager you used.
 5. Return to the installer and select **Install**.
@@ -30,9 +30,9 @@ Use these steps only when Android specifically says Advanced Protection is preve
 
 Temporarily disabling Device protection reduces some Android security restrictions. Verify that the APK came from the official repository before proceeding, re-enable Device protection after installation, and keep Google Play Protect enabled.
 
-## New App Identity In 0.6.80
+## Updating From 0.6.80 Or Newer
 
-Version 0.6.80 is a new installation, so it can appear beside an older Bubbles Browser installation. Profiles, settings, passwords, history, and other private app data from the older app are not transferred automatically.
+Version 1.0.3 updates the current Bubbles Browser installation when it was installed from a compatible official APK. Install the new APK over the existing app so Android can retain profiles, settings, passwords, history, and other local app data.
 
 If the older app is detected, Bubbles Browser offers **Remove old app**. This opens Android's official uninstall confirmation. Export anything needed from the older app before approving removal because Android permanently deletes that app's local data.
 
@@ -49,16 +49,16 @@ Choose **While using the app** or the closest available option when you want a f
 
 ## Verify The Download
 
-The expected SHA-256 checksum for the version 0.6.80 APK is:
+The expected SHA-256 checksum for version 1.0.3 build 34 is:
 
 ```text
-273692D08AEC304169DBF08B610BF95F222233076A6AF1A57CA3ECF67AD03CDD
+1E790A9D4C88D08F9AFD666DDFEDB952E5B8699A50901886557F6FF5BFC634B8
 ```
 
 On Windows PowerShell, verify a downloaded copy with:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 ".\Bubbles-Browser-Android-v0.6.80.apk"
+Get-FileHash -Algorithm SHA256 ".\Bubbles-Browser-Android-v1.0.3.apk"
 ```
 
 The displayed hash must match the value above exactly.
@@ -79,14 +79,14 @@ adb devices
 5. Install or update the application:
 
 ```powershell
-adb install -r ".\Bubbles-Browser-Android-v0.6.80.apk"
+adb install -r ".\Bubbles-Browser-Android-v1.0.3.apk"
 ```
 
 When `adb` is not on PATH, use the full path to `platform-tools\adb.exe`.
 
 ## Updating
 
-Version 0.6.80 is a fresh installation. For releases after 0.6.80, download the newer official APK and install it over 0.6.80. Android will retain its local app data during a normal update. Export important profile data before updating as an extra precaution.
+Download the newer official APK and install it over the current compatible release. Android will retain its local app data during a normal update. Export important profile data before updating as an extra precaution.
 
 ## Troubleshooting
 
