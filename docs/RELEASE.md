@@ -1,94 +1,134 @@
-# Bubbles Browser Android 0.6.70 Build 12
+# Bubbles Browser Android 0.6.80 Build 13
 
-Version `0.6.70` build `12` is an early Android release of Bubbles Browser with a native, touch-friendly interface and no AI integration.
+Version `0.6.80` build `13` is a major mobile-browser update with a redesigned interface, broader website compatibility, expanded privacy controls, working media features, persistent profiles and settings, and no AI integration.
 
-## Highlights
+## Interface And Navigation
 
-- Modern Material 3 mobile interface with correct status-bar and navigation-bar spacing.
-- A single start-page search and address field with complete **Bubbles Browser** branding.
-- Responsive controls that remain inside the screen at larger Android font sizes.
-- Multiple tabs, bookmarks, history, downloads, profiles, guest mode, and profile backups.
-- Settings wired to browser behavior, including privacy, accessibility, focus, reading, and performance options.
-- Local safe-browsing checks and optional ad and tracker blocking.
-- Expanded Streaming Hub covering subscription, live TV, sports, specialty, free, creator-video, personal-media, and audio services.
-- Android-native music playback and direct audio-file downloads.
-- Download completion notifications and Android runtime permission handling.
-- Task Manager, Diagnostics, Trust Center, and scrollable About screen.
-- AI-free operation with no telemetry, analytics, or cloud synchronization.
+- Redesigned the browser with a modern light-gray and blue interface, rounded typography, responsive spacing, and touch-friendly controls.
+- Corrected status-bar and navigation-bar spacing so controls are not hidden behind Android system areas.
+- Removed the duplicate top search box and kept one clear search and address field.
+- Updated the home title to **Bubbles Browser** and removed unnecessary introductory text.
+- Prevented long labels, Music controls, profile controls, and accessibility layouts from extending beyond the screen.
+- Made About and Release Notes fully scrollable so content is not cut off.
+- Added complete tab controls with back, forward, home, reload, new-tab, close-tab, and menu actions.
+- Added bookmarks, searchable history, downloads, profiles, guest browsing, and local profile backup and restore.
 
-## Fixes In 0.6.70
+## Website And Media Compatibility
 
-- Preserved created profiles, renamed profiles, and profile-specific browser settings during in-place APK updates.
-- Preserved enabled and disabled toggle values independently for each saved profile.
-- Stopped startup from overwriting an existing or renamed default profile.
-- Added on-disk restart tests and a physical-device upgrade test from version 0.6.35 to 0.6.70.
+- Uses mobile website layouts by default.
+- Added a global **Desktop mode** toggle in Settings and a remembered **Desktop site** control for individual websites.
+- Added true full-screen HTML5 video that hides browser and Android system controls during playback.
+- Improved website image and video loading by allowing ordinary media-delivery requests that privacy lists may misclassify.
+- Fixed blank-page behavior on Facebook while continuing to block Facebook tracking resources on unrelated websites.
+- Added compatibility handling for websites that require mixed media content.
+- Added secure website permission prompts for camera, microphone, protected media, and location.
+- Location access is requested only when a secure website needs nearby search results; background location is not requested.
 
-- Removed the duplicate search field from the home screen.
-- Corrected the home title from **Bubbles** to **Bubbles Browser**.
-- Added a clearly visible light-gray and blue background blend with playful rounded typography.
-- Removed the unnecessary start-page description to keep the browser home screen focused.
-- Added true full-screen HTML5 video with browser and Android system controls hidden during playback.
-- Added HTTPS-only WebView protected-media handling plus Android camera and microphone permission prompts when requested by a website.
-- Added on-demand approximate or precise location permission for secure websites that provide nearby restaurant, store, and local search results; no background location access is requested.
-- Kept notification permission for download completion alerts and music/audio permission for selecting and playing downloaded device audio.
-- Enabled third-party cookies only inside Streaming Hub tabs to improve account sign-in without changing the default browsing policy.
-- Allowed secure HTTPS authentication redirects in streaming sessions while continuing to block unsafe URLs and non-secure redirects.
-- Prevented Music controls and long button labels from extending beyond the display.
-- Removed package, repository, organization, desktop-source, and exact build-time details from About.
-- Added the support email and a direct **Email support** action.
-- Made release notes scrollable so the complete text remains accessible.
+## Streaming Hub
+
+- Expanded the Streaming Hub with subscription video, live TV, sports, free video, creator platforms, specialty services, personal media, and audio services.
+- Improved account sign-in by allowing third-party cookies only inside Streaming Hub tabs.
+- Allowed secure authentication redirects while continuing to block unsafe addresses and insecure redirects.
+- Added full-screen playback and website permission handling for supported streaming services.
+- Some services may still require a paid account, compatible DRM support, or their official Android app.
+
+## Privacy And Security
+
+- Renamed the home counter to **Ads & trackers blocked**.
+- Added separate Trust Center statistics for ads, trackers, fingerprinting attempts, removed tracking parameters, tracking cookies, detected CNAME trackers, malicious requests, cryptomining requests, and compatibility protections.
+- Added locally cached EasyList, EasyPrivacy, AdGuard Base, AdGuard Tracking Protection, AdGuard URL Tracking Protection, Peter Lowe's list, DuckDuckGo Tracker Radar, Fanboy Annoyance, Fanboy Social, URLHaus, and NoCoin-compatible protection lists.
+- Added enable and disable controls plus supported-rule counts and update status for each privacy list.
+- Enabled automatic first-run downloads for recommended lists when no local cache exists.
+- Fixed URLHaus parsing and NoCoin-compatible rule downloading, caching, and enforcement.
+- Added per-site **Block ads and trackers for this site** controls.
+- Added strict, balanced, and off modes for canvas and JavaScript fingerprint protection.
+- Added recommended, strict, and off WebRTC local-IP protection modes.
+- Added local safe-browsing checks for websites and risky downloads.
+- Added encrypted saved passwords, strong-password generation, private password-breach checks, and user-controlled encrypted clipboard history.
+- Keeps normal browsing cookies restricted while applying compatibility allowances only where needed.
+- Includes no Ollama, generative AI, telemetry, analytics, or cloud synchronization.
+
+## Profiles And Saved Settings
+
+- Added standard, guest, child, work, and streaming profile types.
+- Keeps bookmarks, history, downloads, and browser settings scoped to the selected profile.
+- Preserves created and renamed profiles after app restarts and normal future APK updates.
+- Preserves each profile's enabled and disabled setting choices.
+- Fixed startup behavior that could overwrite a renamed default profile.
+- Added local profile export and import without including profile PINs.
+
+## Settings And Accessibility
+
+- Connected the settings controls to real browser behavior instead of displaying inactive switches.
+- Added controls for third-party cookies, safe browsing, ad and tracker blocking, and Desktop mode.
+- Added large text, high contrast, reduced motion, dyslexia-friendly text, simplified UI, Focus mode, and a reading ruler.
+- Added battery saver, background-tab suspension, and local diagnostics controls.
+- Added a spoken accessibility preview.
+- Added current-site controls and clear explanations where Android WebView limits a feature.
+
+## Music, Downloads, And Notifications
+
+- Added local audio playback using Android's media system.
+- Added device-music loading and Android file-picker support.
+- Added play and stop controls with responsive layouts.
+- Added direct audio-file downloading after responsible-use consent.
+- Added Android download-manager integration with active, completed, cancelled, and failed download states.
+- Added download completion and failure notifications.
+- Added optional Music and audio permission handling for local playback.
+
+## Performance And Reliability
+
+- Moved privacy-list downloading, parsing, and compilation away from the main interface thread.
+- Reduced Settings and Privacy Lists rendering work to improve responsiveness after the browser has been open for a while.
+- Added a Task Manager for tabs and memory information.
+- Added Diagnostics and a refreshable performance snapshot.
 - Updated the Android toolchain and security-related dependencies.
-- Fixed blank Facebook pages with a narrowly scoped Chrome-compatible Facebook fallback.
-- Kept Facebook-owned resources available on Facebook while continuing to block Facebook trackers embedded by unrelated sites.
-- Improved image and video compatibility by allowing ordinary media CDN requests that tracker lists misclassified, while continuing to block ad images, tracking pixels, malicious hosts, and cryptomining requests.
-- Added a per-site **Block ads and trackers for this site** switch and modern-browser mixed-content compatibility for websites that need relaxed media handling.
-- Kept every website in mobile mode by default, added a permanent global **Desktop mode** switch in Settings, and retained a remembered per-site **Desktop site** switch in the browser menu and current-site settings.
-- Renamed the home counter to **Ads & trackers blocked** so its purpose is clear.
-- Added live, category-specific privacy statistics to the Trust Center with accurate capability and protection-source labels.
-- Added user-controlled, cached privacy-list subscriptions for EasyList, EasyPrivacy, AdGuard Base, AdGuard Tracking, AdGuard URL Tracking, Peter Lowe, DuckDuckGo Tracker Radar, Fanboy Annoyance/Social, URLHaus, and NoCoin-compatible rules.
-- Automatically downloads enabled privacy lists when a fresh install has no local cache, instead of showing misleading zero-rule counts indefinitely.
-- Fixed URLHaus hosts-file parsing so tab-separated malicious-domain entries are compiled and enforced correctly.
-- Confirmed NoCoin-compatible rules are downloaded, parsed, cached, and compiled on first launch.
-- Added canvas and JavaScript fingerprint-protection modes and WebRTC local-IP protection modes.
-- Added encrypted saved passwords, a strong-password generator, k-anonymous password-breach checks, and user-controlled encrypted clipboard history.
-- Kept privacy-list parsing and compilation off the main thread so updates do not freeze the interface.
-- Reduced Settings and Privacy Lists rendering work for smoother navigation during longer browser sessions.
+- Verified profile and setting persistence across restarts and normal future updates.
+- Passed unit tests, Android lint, and all 14 connected Android tests for this build.
+
+## Fresh Installation Notice
+
+Version 0.6.80 installs as a new application and may appear beside an older Bubbles Browser installation. It begins with fresh profiles and settings. Data from an older installation is not transferred automatically.
+
+- When an older installation is detected, Bubbles Browser now offers **Remove old app** and opens Android's official uninstall confirmation.
+- The prompt reminds you to back up anything needed before removal because uninstalling permanently deletes the older app's local data.
+- Choose **Keep for now** when you still need time to export information from the older app.
+
+Future releases can be installed over version 0.6.80 normally. Do not uninstall version 0.6.80 before updating if you want Android to retain its local app data.
 
 ## Requirements
 
-- Android 10 or newer (`minSdk 29`)
-- Android System WebView
+- Android 10 or newer
+- An enabled and updated Android System WebView
+- Internet access for websites, streaming services, downloads, and privacy-list updates
 
 ## Installation
 
-1. Download `Bubbles-Browser-Android-v0.6.70.apk` from the release assets.
+1. Download `Bubbles-Browser-Android-v0.6.80.apk` from the release assets.
 2. Open the APK on the Android device.
 3. Allow installation from the current browser or file manager if Android requests it.
 4. Choose **Install**, then launch **Bubbles Browser**.
-5. Allow notifications for download alerts and music access only when using local audio features.
+5. Grant only the optional permissions needed for the features you use.
 
-## Verification
+If Android specifically says Advanced Protection blocked the APK, open **Settings**, search for **Advanced Protection**, temporarily turn off **Device protection**, and authenticate. Restart if Android requests it, install the verified APK, then return to the same screen and re-enable Device protection. Keep Google Play Protect enabled.
 
-- Version name: `0.6.70`
-- Build label: `12`
-- Android version code: `12`
-- Package: `org.fnbubbles420.bubblesbrowser`
-- APK SHA-256: `1155B74B4137F8BC638238571820128658B964A1E0E0672EE20EE52354E7F598`
-- APK signature: Android APK Signature Scheme v2, one signer
-- Device test: Motorola moto g stylus 2025, Android 16
-- Automated verification: unit tests, Android lint, and 14 connected-device tests passed
-- Upgrade verification: an `UpgradeMarker` profile and enabled Desktop mode toggle survived an in-place update from 0.6.35 to 0.6.70
-- Snyk: no known vulnerable paths in the runtime project at release time
+## Download Verification
+
+- Version: `0.6.80`
+- Build: `13`
+- APK SHA-256: `273692D08AEC304169DBF08B610BF95F222233076A6AF1A57CA3ECF67AD03CDD`
+- APK signature verified
+- Runtime dependencies checked with Snyk at release time
 
 ## Known Limitations
 
-- This GitHub asset is a developer-signed early-access APK and is not a Google Play release.
-- Website behavior depends on the installed Android System WebView version.
-- Some streaming services may require an official app or may limit DRM playback in WebView.
-- Music downloads require direct audio-file URLs and do not use the desktop extraction pipeline.
-- Full WebView cookie and storage isolation between profiles is limited by Android WebView architecture.
-- Android WebView cannot enforce every desktop cosmetic-filter rule or expose DNS details for CNAME uncloaking; the app reports these limits explicitly.
+- This is a directly downloaded early-access APK and is not currently available from Google Play.
+- Website behavior depends on the Android System WebView installed on the device.
+- Some streaming services may require an official app or may restrict DRM playback in embedded browsers.
+- Music downloads require direct audio-file links and do not extract audio from video websites.
+- Android limits complete cookie and website-storage isolation between browser profiles.
+- Android WebView cannot apply every desktop cosmetic-filter rule or provide full DNS-level CNAME uncloaking.
 
 ## Support
 
-Email **support.bubblesthedev.webbrowser@gmail.com**. For security issues, follow [SECURITY.md](SECURITY.md) and do not publish exploit details in a public issue.
+Email **support.bubblesthedev.webbrowser@gmail.com**. For security concerns, follow [SECURITY.md](SECURITY.md) and do not publish private security details in a public issue.

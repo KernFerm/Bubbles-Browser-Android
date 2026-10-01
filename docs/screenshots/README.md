@@ -1,6 +1,6 @@
 # Bubbles Browser Android Screenshots
 
-These screenshots document the interface used by Bubbles Browser 0.6.35 on a physical Android phone. The privacy-list images were refreshed on 0.6.35; some other images were captured during 0.5.10 UI verification, so the About and Release Notes images show that earlier version number. The profile was kept empty so the images do not expose personal browsing data, credentials, downloads, or clipboard contents.
+These screenshots provide a general tour of Bubbles Browser. Some screens may differ slightly from the latest release as the interface continues to improve. The gallery uses an empty demonstration profile and contains no personal browsing data, credentials, downloads, or clipboard contents.
 
 ## Browsing
 
