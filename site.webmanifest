@@ -1,0 +1,10 @@
+{
+  "name": "Bubbles Browser for Android",
+  "short_name": "Bubbles Browser",
+  "description": "Download and learn about the AI-free Bubbles Browser for Android.",
+  "start_url": "/Bubbles-Browser-Android/",
+  "scope": "/Bubbles-Browser-Android/",
+  "display": "standalone",
+  "background_color": "#d4dce2",
+  "theme_color": "#304d66"
+}
