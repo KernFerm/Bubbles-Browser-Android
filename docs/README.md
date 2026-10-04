@@ -13,6 +13,9 @@ See the [complete screenshot gallery](screenshots/) for the browser, privacy con
 ## What It Does
 
 - Browse websites in multiple tabs with back, forward, home, reload, and new-tab controls.
+- Add or remove the current page with the bookmark button beside the address bar.
+- Choose Bubbles Browser as the Android default browser so web links open directly in the app.
+- Follow the phone language automatically for core browsing controls, saved content, permission prompts, and primary settings across 29 locales: English, Spanish, French, German, Brazilian Portuguese, Japanese, Simplified Chinese, Arabic, Hindi, Indonesian, Italian, Korean, Russian, Dutch, Polish, Thai, Turkish, Ukrainian, Vietnamese, Czech, Danish, Finnish, Norwegian Bokmål, Romanian, Swedish, Greek, Hungarian, Slovak, and Croatian.
 - Load modern mobile sites with JavaScript, responsive images, stylesheets, web fonts, forms, uploads, downloads, popups, and supported audio or video through the device's Android System WebView.
 - Search the web or enter a website address from the start page.
 - Save bookmarks and review or clear browsing history.
@@ -63,11 +66,15 @@ If Android says Advanced Protection is blocking the APK, open your phone's **Set
 
 ## Updating
 
-Version 1.0.3 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
+Version 1.0.10 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
 
 When Bubbles Browser detects the older installation, it offers **Remove old app** and opens Android's official uninstall confirmation. Back up anything needed from the older app first because uninstalling permanently deletes its local data.
 
 Do not uninstall the current app before updating if you want Android to retain its local data. Export important profile data before updating as an extra precaution.
+
+## Make Bubbles Your Default Browser
+
+Open **Bubbles Browser > Settings > Browsing** and tap **Set as default browser**. Android displays its official browser chooser; select Bubbles Browser there. You can return to the same setting later to change the default browser.
 
 ## Permissions
 

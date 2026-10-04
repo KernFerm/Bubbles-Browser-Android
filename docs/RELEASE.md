@@ -1,17 +1,22 @@
-# Bubbles Browser Android 1.0.3 Build 34
+# Bubbles Browser Android 1.0.10 Build 40
 
-Version `1.0.3` build `34` adds targeted YouTube ad-request blocking based on the desktop Bubbles Browser implementation while preserving mobile-site compatibility, profile isolation, uploads, downloads, page restoration, media behavior, and the browser's AI-free design.
+Version `1.0.10` build `40` adds direct bookmark controls, Android default-browser support, and automatic device-language support for the core interface while retaining mobile-site compatibility, privacy protections, profile isolation, uploads, downloads, page restoration, media behavior, and the browser's AI-free design.
 
-## New In Build 34
+## New In Build 40
 
-- Ported the desktop browser's YouTube-specific request rules into Android's existing privacy engine.
-- Blocks known YouTube advertising hosts, ad-reporting paths, tracking pings, and explicit ad query markers when **Ads and trackers** is enabled.
-- Keeps legitimate `googlevideo.com` video and audio streams available instead of blocking the entire media domain.
-- Continues filtering during YouTube single-page navigation without reload loops, page-wide polling, or unsafe JavaScript interfaces.
-- Uses YouTube page, request, and referrer context so YouTube-only rules do not run against unrelated websites.
-- Records blocked YouTube advertising and tracking requests in the existing on-device privacy counters.
-- Preserves YouTube mobile pages, search, thumbnails, comments, recommendations, Shorts navigation, normal playback, seeking, fullscreen, and rotation behavior supported by Android System WebView.
-- Includes no telemetry, analytics, browsing uploads, credential inspection, HTTPS bypasses, or WebView security reductions.
+- Added a bookmark button beside the address bar for saving or removing the current page with one tap.
+- Shows a filled bookmark icon when the current page is already saved in the active profile.
+- Keeps bookmark actions disabled on the local start page and in private tabs.
+- Added **Set as default browser** and **Manage default browser** actions under **Settings > Browsing**.
+- Registered Bubbles Browser as an Android web-browser candidate for supported HTTP and HTTPS links.
+- Routes links opened from other Android apps into the active Bubbles Browser tab.
+- Uses Android's official browser-role chooser and does not change the device default without user approval.
+- Added automatic device-language selection for core browser controls, the start page, bookmarks, history, permission prompts, duplicate-app cleanup, and primary settings.
+- Expanded automatic device-language support to 29 locales: English, Spanish, French, German, Brazilian Portuguese, Japanese, Simplified Chinese, Arabic, Hindi, Indonesian, Italian, Korean, Russian, Dutch, Polish, Thai, Turkish, Ukrainian, Vietnamese, Czech, Danish, Finnish, Norwegian Bokmål, Romanian, Swedish, Greek, Hungarian, Slovak, and Croatian. Each locale includes the complete 99-string core interface set, with English fallback for text outside that set.
+- Updated the in-app About screen to show the complete 29-language list instead of a shortened summary.
+- Added physical-device tests that verify Android selects the correct translated resources and formats protection counters in the active locale.
+- Updated the spoken accessibility preview to use the device language instead of forcing US English.
+- Retains the targeted YouTube advertising and tracking request protections introduced in Build 34.
 
 ## Features Retained From Earlier Builds
 
@@ -125,7 +130,7 @@ Version `1.0.3` build `34` adds targeted YouTube ad-request blocking based on th
 
 ## Fresh Installation Notice
 
-Version 1.0.3 updates the current Bubbles Browser installation when it was installed from the compatible official APK. Android retains its local profiles and settings during a normal update.
+Version 1.0.10 updates the current Bubbles Browser installation when it was installed from the compatible official APK. Android retains its local profiles and settings during a normal update.
 
 - When an older installation is detected, Bubbles Browser now offers **Remove old app** and opens Android's official uninstall confirmation.
 - The prompt reminds you to back up anything needed before removal because uninstalling permanently deletes the older app's local data.
@@ -141,7 +146,7 @@ Do not uninstall the current app before updating if you want Android to retain i
 
 ## Installation
 
-1. Download `Bubbles-Browser-Android-v1.0.3.apk` from the release assets.
+1. Download `Bubbles-Browser-Android-v1.0.10.apk` from the release assets.
 2. Open the APK on the Android device.
 3. Allow installation from the current browser or file manager if Android requests it.
 4. Choose **Install**, then launch **Bubbles Browser**.
@@ -151,9 +156,9 @@ If Android specifically says Advanced Protection blocked the APK, open **Setting
 
 ## Download Verification
 
-- Version: `1.0.3`
-- Build: `34`
-- APK SHA-256: `1E790A9D4C88D08F9AFD666DDFEDB952E5B8699A50901886557F6FF5BFC634B8`
+- Version: `1.0.10`
+- Build: `40`
+- APK SHA-256: `F6C6A31E7E657AC416C622725F0212DDFA8E1431409002869372BDED125B2645`
 - APK signature verified
 - Runtime dependencies checked with Snyk at release time
 

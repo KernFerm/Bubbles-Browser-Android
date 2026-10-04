@@ -1,34 +1,21 @@
 # Bubbles Browser for Android
 
-Bubbles Browser is a private, AI-free web browser for Android phones and tablets. You can browse websites, save bookmarks, download files, play local music, and choose the privacy protections that work best for you.
+Bubbles Browser is an AI-free, privacy-focused web browser for Android. It combines everyday mobile browsing with local profiles, accessibility controls, media tools, and visible privacy settings.
 
-## Download And Install
-
-**[Download the newest APK from GitHub Releases](https://github.com/KernFerm/Bubbles-Browser-Android/releases/latest)**
-
-1. On your Android device, open the download link above.
-2. Under **Assets**, tap `Bubbles-Browser-Android-v1.0.3.apk`.
-3. When the download finishes, tap the APK file.
-4. If Android asks for permission, allow your browser or Files app to install unknown apps.
-5. Tap **Install**, then tap **Open**.
-
-Google Play Protect may warn that this app came from outside Google Play. That is expected for a GitHub APK. Confirm that the download came from this official repository before continuing.
-
-### Optional: Advanced Protection Blocks Installation
-
-If Android says Advanced Protection is blocking the APK, open your phone's **Settings**, search for **Advanced Protection**, open it, and turn off **Device protection**. Authenticate with your PIN or biometrics and restart the phone if Android requests it. Install the verified APK, then return to the same screen and re-enable **Device protection**. Use this only when Advanced Protection specifically prevents installation, and keep Google Play Protect enabled.
-
-Visit the **[Bubbles Browser website](https://kernferm.github.io/Bubbles-Browser-Android/)** for screenshots, a feature overview, and the same official download.
+Visit the end-user website at **https://kernferm.github.io/Bubbles-Browser-Android/** to view features, screenshots, installation steps, and the direct APK download.
 
 <p align="center">
-  <img src="docs/screenshots/01-home.jpg" width="300" alt="Bubbles Browser start page">
+  <img src="screenshots/01-home.jpg" width="300" alt="Bubbles Browser start page">
 </p>
 
-See the [screenshot gallery](https://kernferm.github.io/Bubbles-Browser-Android/screenshots/) to look around before installing. The [step-by-step installation guide](docs/INSTALLATION.md) includes additional help and APK verification instructions.
+See the [complete screenshot gallery](screenshots/) for the browser, privacy controls, music tools, streaming hub, profiles, diagnostics, and settings. For a focused setup walkthrough, see [INSTALLATION.md](INSTALLATION.md).
 
 ## What It Does
 
 - Browse websites in multiple tabs with back, forward, home, reload, and new-tab controls.
+- Add or remove the current page with the bookmark button beside the address bar.
+- Choose Bubbles Browser as the Android default browser so web links open directly in the app.
+- Follow the phone language automatically for core browsing controls, saved content, permission prompts, and primary settings across 29 locales: English, Spanish, French, German, Brazilian Portuguese, Japanese, Simplified Chinese, Arabic, Hindi, Indonesian, Italian, Korean, Russian, Dutch, Polish, Thai, Turkish, Ukrainian, Vietnamese, Czech, Danish, Finnish, Norwegian Bokmål, Romanian, Swedish, Greek, Hungarian, Slovak, and Croatian.
 - Load modern mobile sites with JavaScript, responsive images, stylesheets, web fonts, forms, uploads, downloads, popups, and supported audio or video through the device's Android System WebView.
 - Search the web or enter a website address from the start page.
 - Save bookmarks and review or clear browsing history.
@@ -36,7 +23,6 @@ See the [screenshot gallery](https://kernferm.github.io/Bubbles-Browser-Android/
 - Use separate standard, guest, child, work, and streaming profiles.
 - Export and import local profile backups. Profile PINs are not included in backups.
 - Block known advertising and tracking requests and show a session counter.
-- Block supported YouTube advertising and tracking requests without broadly blocking YouTube video and audio delivery.
 - Review separate ad, tracker, fingerprinting, URL-cleanup, malicious-request, cryptomining, and compatibility statistics in the Trust Center.
 - Enable, disable, and update locally cached EasyList, EasyPrivacy, AdGuard, Peter Lowe, DuckDuckGo Tracker Radar, Fanboy, URLHaus, and NoCoin-compatible protection lists.
 - Choose strict, balanced, or off modes for canvas and JavaScript fingerprint protection, plus recommended, strict, or off WebRTC privacy.
@@ -55,19 +41,40 @@ Enabled privacy lists are downloaded automatically when a fresh install has no l
 
 ## Requirements
 
-- A phone or tablet running Android 10 or newer
-- An internet connection
-- An up-to-date Android System WebView, available through Google Play
+- Android 10 or newer
+- Android System WebView enabled and updated
+- Internet access for browsing
 
 Some websites and streaming providers may require their own account, subscription, DRM support, or official app.
 
+## Install From GitHub
+
+1. Open the [Bubbles Browser Android Releases page](https://github.com/KernFerm/Bubbles-Browser-Android/releases) on your Android device.
+2. Open the newest release and download its `.apk` file.
+3. If Android asks, allow your browser or file manager to install unknown apps.
+4. Open the downloaded APK and choose **Install**.
+5. Launch **Bubbles Browser**.
+6. Allow notifications if you want download-completion alerts.
+7. Allow music and audio access only if you want the browser to load audio already stored on your device.
+8. Allow location only when a website you trust needs nearby search results.
+
+Android may display a warning because the APK is installed outside Google Play. Only install APKs from the official repository linked above.
+
+### Optional: Advanced Protection Blocks Installation
+
+If Android says Advanced Protection is blocking the APK, open your phone's **Settings**, search for **Advanced Protection**, open it, and turn off **Device protection**. Authenticate with your PIN or biometrics and restart the phone if Android requests it. Install the verified APK, then return to the same screen and re-enable **Device protection**. Use this only when Advanced Protection specifically prevents installation, and keep Google Play Protect enabled.
+
 ## Updating
 
-Version 1.0.3 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
+Version 1.0.10 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
 
 When Bubbles Browser detects the older installation, it offers **Remove old app** and opens Android's official uninstall confirmation. Back up anything needed from the older app first because uninstalling permanently deletes its local data.
 
 Do not uninstall the current app before updating if you want Android to retain its local data. Export important profile data before updating as an extra precaution.
+
+## Make Bubbles Your Default Browser
+
+Open **Bubbles Browser > Settings > Browsing** and tap **Set as default browser**. Android displays its official browser chooser; select Bubbles Browser there. You can return to the same setting later to change the default browser.
 
 ## Permissions
 
@@ -95,7 +102,7 @@ Do not uninstall the current app before updating if you want Android to retain i
 - Confirm the address is correct and begins with `https://` when possible.
 - Temporarily disable ad and tracker blocking for compatibility testing.
 - If a site breaks after enabling an optional privacy list, disable that list under **Settings > Manage privacy lists**, then reload the page.
-- Websites use their mobile layouts by default. If a website works only in its desktop layout, enable **Desktop site** for that website from the browser menu or enable **Desktop mode** for every website in Settings.
+- Facebook pages automatically use a compatibility mode because Facebook's mobile response can fail in Android WebView.
 - Some DRM-heavy streaming websites may require their provider's official Android app.
 
 ### Download Notifications Do Not Appear
