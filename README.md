@@ -5,7 +5,7 @@ Bubbles Browser is an AI-free, privacy-focused web browser for Android. It combi
 Visit the end-user website at **https://kernferm.github.io/Bubbles-Browser-Android/** to view features, screenshots, installation steps, and the direct APK download.
 
 <p align="center">
-  <img src="screenshots/01-home.jpg" width="300" alt="Bubbles Browser start page">
+  <img src="docs/screenshots/01-home.jpg" width="300" alt="Bubbles Browser start page">
 </p>
 
 See the [complete screenshot gallery](screenshots/) for the browser, privacy controls, music tools, streaming hub, profiles, diagnostics, and settings. For a focused setup walkthrough, see [INSTALLATION.md](INSTALLATION.md).
