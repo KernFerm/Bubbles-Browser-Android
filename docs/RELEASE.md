@@ -1,9 +1,10 @@
-# Bubbles Browser Android 1.0.10 Build 40
+# Bubbles Browser Android 1.0.15 Build 48
 
-Version `1.0.10` build `40` adds direct bookmark controls, Android default-browser support, and automatic device-language support for the core interface while retaining mobile-site compatibility, privacy protections, profile isolation, uploads, downloads, page restoration, media behavior, and the browser's AI-free design.
+Version `1.0.15` build `48` expands compatibility across supported Android devices while retaining direct bookmark controls, Android default-browser support, automatic device-language support, privacy protections, profile isolation, uploads, downloads, page restoration, media behavior, and the browser's AI-free design.
 
-## New In Build 40
+## Highlights In Build 48
 
+- Declared optional camera, autofocus, microphone, and location hardware so Google Play does not unnecessarily exclude otherwise compatible Android devices.
 - Added a bookmark button beside the address bar for saving or removing the current page with one tap.
 - Shows a filled bookmark icon when the current page is already saved in the active profile.
 - Keeps bookmark actions disabled on the local start page and in private tabs.
@@ -130,7 +131,7 @@ Version `1.0.10` build `40` adds direct bookmark controls, Android default-brows
 
 ## Fresh Installation Notice
 
-Version 1.0.10 updates the current Bubbles Browser installation when it was installed from the compatible official APK. Android retains its local profiles and settings during a normal update.
+Version 1.0.15 updates the current Bubbles Browser installation when it was installed from the compatible official APK. Android retains its local profiles and settings during a normal update.
 
 - When an older installation is detected, Bubbles Browser now offers **Remove old app** and opens Android's official uninstall confirmation.
 - The prompt reminds you to back up anything needed before removal because uninstalling permanently deletes the older app's local data.
@@ -146,7 +147,7 @@ Do not uninstall the current app before updating if you want Android to retain i
 
 ## Installation
 
-1. Download `Bubbles-Browser-Android-v1.0.10.apk` from the release assets.
+1. Download `Bubbles-Browser-Android-v1.0.15.apk` from the release assets.
 2. Open the APK on the Android device.
 3. Allow installation from the current browser or file manager if Android requests it.
 4. Choose **Install**, then launch **Bubbles Browser**.
@@ -156,9 +157,9 @@ If Android specifically says Advanced Protection blocked the APK, open **Setting
 
 ## Download Verification
 
-- Version: `1.0.10`
-- Build: `40`
-- APK SHA-256: `F6C6A31E7E657AC416C622725F0212DDFA8E1431409002869372BDED125B2645`
+- Version: `1.0.15`
+- Build: `48`
+- APK SHA-256: `51D3E083C3F4EE73797D3B95C2312E9E5B35DEFDFF00176FC51D03DD00C66C9D`
 - APK signature verified
 - Runtime dependencies checked with Snyk at release time
 

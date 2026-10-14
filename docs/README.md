@@ -66,7 +66,7 @@ If Android says Advanced Protection is blocking the APK, open your phone's **Set
 
 ## Updating
 
-Version 1.0.10 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
+Version 1.0.15 updates a compatible current Bubbles Browser installation. Install the APK over the existing app so Android can retain local profiles and settings.
 
 When Bubbles Browser detects the older installation, it offers **Remove old app** and opens Android's official uninstall confirmation. Back up anything needed from the older app first because uninstalling permanently deletes its local data.
 

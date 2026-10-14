@@ -1,6 +1,6 @@
 # Bubbles Browser Android Screenshots
 
-These screenshots show Bubbles Browser Android 1.0.10 build 40 with its current mobile interface. The gallery uses empty app screens and a temporary Guest history view. It contains no personal browsing data, credentials, downloads, or clipboard contents.
+These screenshots show Bubbles Browser Android 1.0.15 build 48 with its current mobile interface. The gallery uses empty app screens and a temporary Guest history view. It contains no personal browsing data, credentials, downloads, or clipboard contents.
 
 ## Browser
 
